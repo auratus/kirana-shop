@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+.dashboardOuterContainer {
+    background-color: rgb(1, 40, 44);
+    height: 100vh;
+    width: 100%;
+    padding: 40px;
+}
+
+.dashboardInnerContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    background-color: rgb(243, 230, 207);
+}
+
+.dashboardInnerContainerLeftPane {
+    width: 40%;
+    height: 100%;
+    padding: 0 0 0 80px;
+}
+
+.dashboardInnerContainerRightPane {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(168, 211, 197);
+    border-radius: 0 0 0 30%/0 0 0 30%;
+    background-image: url(../assets/images/dashboardRightPaneBG2.jpg), url(../assets/images/dashboardRightPaneBG2.jpg);
+    background-position: left, right;
+    background-size: 100% 100%, 100% 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dashboardInnerContainerRightPaneOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0 0 0 30%/0 0 0 30%;
+}
+
+.dashboardInnerContainerLeftPaneHeader {
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Georgia;
+    font-weight: 600;
+    color: rgb(16, 86, 54);
+}
+
+.dashboardInnerContainerLeftPaneBody {
+    height: calc(100% - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashboardInnerContainerLeftPaneBodyTagLine {
+    font-size: 70px;
+    line-height: 70px;
+}
+
+.dashboardInnerContainerLeftPaneBodyTagLineDecription {
+    color: rgb(54, 123, 92);
+    font-size: 13.5px;
+    padding: 30px 10px 30px 0;
+    font-weight: 600;
+}
+
+.dashboardInnerContainerLeftPaneBodyActionsGetStarted button {
+    width: 140px;
+    height: 50px;
+    background-color: rgb(54, 123, 92);
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    border-radius: 20% 20% 20% 20%/50% 50% 50% 50%;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+
+.dashboardInnerContainerLeftPaneBodyActionsGetStarted button:hover {
+    background-color: transparent;
+    color: rgb(54, 123, 92);
+    border: 1px solid rgb(54, 123, 92);
+}
+
+@media(max-width:1080px) {
+    .dashboardOuterContainer {
+        padding: 0;
+    }
+
+    .dashboardInnerContainerLeftPane {
+        width: 100%;
+        height: 100%;
+        padding: 0 0 0 40px;
+    }
+
+    .dashboardInnerContainerRightPane {
+        width: 0;
+    }
+
+    .dashboardInnerContainerLeftPaneBody {
+        height: 60%;
+    }
+}
